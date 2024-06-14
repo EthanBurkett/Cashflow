@@ -17,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(dmsans.className, "w-screen h-screen bg-dark-default")}
-      >
-        <div className="main flex flex-col w-full h-full max-w-[1200px] mx-auto text-light-default">
+      <body className={cn(dmsans.className, "w-screen h-screen bg-light-100")}>
+        <div className="main flex flex-col w-full h-full max-w-[1200px] mx-auto text-dark-default">
           {children}
         </div>
       </body>

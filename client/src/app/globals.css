@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button-gradient {
+    @apply from-brand-200 to-blue-400 bg-gradient-to-tr transition-all bg-grad-size hover:bg-grad-pos-end;
+  }
+}

@@ -32,6 +32,13 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundPosition: {
+        "grad-pos-start": "0% 0%",
+        "grad-pos-end": "20% 70%",
+      },
+      backgroundSize: {
+        "grad-size": "300% 200%",
+      },
       colors: {
         brand: {
           default: "#ba52dd",
