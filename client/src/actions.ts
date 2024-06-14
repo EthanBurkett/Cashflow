@@ -1,7 +1,7 @@
 "use server";
 
-export const getUser = async () => {
-  return {
-    id: "123456",
-  };
+import { generateEnvTypes } from "./lib/utils";
+
+export const ready = async () => {
+  generateEnvTypes();
 };
