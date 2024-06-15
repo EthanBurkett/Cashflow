@@ -2,14 +2,14 @@ import React from "react";
 
 type Props = {};
 import { GrFormNextLink } from "react-icons/gr";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { currentUser } from "@clerk/nextjs/server";
-import SignOut from "./SignOut";
 import { UserButton } from "@clerk/nextjs";
+import { isOnboarded } from "@/actions";
 
 const Navbar = async (props: Props) => {
   const user = await currentUser();
+  const onboarded = (await isOnboarded(user?.id!)) || false;
   return (
     <div className="w-full my-4">
       <div className="flex justify-between items-center">
@@ -38,7 +38,7 @@ const Navbar = async (props: Props) => {
             )}
           </div>
           <Link
-            href="/get-started"
+            href={`${onboarded ? "/dashboard" : "/onboarding"}`}
             className="px-4 py-2 text-base button-gradient from-brand-200 to-blue-400 bg-gradient-to-tr text-white rounded-full cursor-pointer flex flex-row gap-1 items-center justify-center "
           >
             Get started for free
