@@ -1,9 +1,13 @@
+import { isOnboarded } from "@/actions";
 import Navbar from "@/components/core/Navbar";
+import { currentUser } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import { GrFormNextLink } from "react-icons/gr";
 
-export default function Home() {
+export default async function Home() {
+  const user = await currentUser();
+  const onboarded = (await isOnboarded(user?.id!)) || false;
   return (
     <div className="w-full h-full my-2 flex flex-col justify-center items-center gap-12">
       <div className="w-full flex flex-col justify-center items-center gap-6">
@@ -22,7 +26,7 @@ export default function Home() {
       </div>
       <div className="w-full flex flex-col justify-center items-center gap-6">
         <Link
-          href="/get-started"
+          href={`${onboarded ? "/dashboard" : "/onboarding"}`}
           className="px-4 py-2 text-xl shadow-xl font-bold button-gradient from-brand-200 to-blue-400 bg-gradient-to-tr text-white rounded-full cursor-pointer flex flex-row gap-1 items-center justify-center"
         >
           Get started for free

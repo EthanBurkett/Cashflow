@@ -1,4 +1,13 @@
 export interface Env { 
   "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": string;
   "CLERK_SECRET_KEY": string;
+  "MONGODB_URI": string;
+  "NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL": string;
+  "NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL": string;
+  "PLAID_CLIENT_ID": string;
+  "PLAID_SECRET": string;
+  "PLAID_ENV": string;
+  "PLAID_PRODUCTS": string;
+  "PLAID_COUNTRY_CODES": string;
+  "PLAID_REDIRECT_URI": string;
 }
