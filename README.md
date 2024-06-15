@@ -11,3 +11,7 @@ With Cashflow, tracking your expenditures becomes a breeze. Whether it's your mo
 But Cashflow is more than just a financial tracker—it's your strategic partner in wealth management. By analyzing your cash flow dynamics, it empowers you to make informed decisions, optimize your budget, and ultimately achieve your financial goals.
 
 Say goodbye to the hassle of manual budgeting and welcome a new era of financial empowerment with Cashflow. Experience the convenience, precision, and peace of mind that comes with having your finances sorted at your fingertips. Revolutionize your financial journey with Cashflow today.
+
+## Current State of Project
+https://github.com/EthanBurkett/Cashflow/assets/82228572/f578eff4-6449-4562-a42c-f36c5d147976
+
